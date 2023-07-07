@@ -1,5 +1,6 @@
 Test Cases:
 Problem 1: URL : /tour/matches?name=<VALUE>&pageSize=<VALUE>&pageNo=<VALUE>
+-> Added pagination for this API to handle a large number of entries in the table
 1. If pagesize <= 0 -> throw an error
 2. If pagesize > 0 -> return the results
 3. If pagesize > number of entries in the table -> return all matching entries
