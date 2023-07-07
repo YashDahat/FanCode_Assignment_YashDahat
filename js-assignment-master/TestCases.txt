@@ -1,0 +1,37 @@
+Test Cases:
+Problem 1: URL : /tour/matches?name=<VALUE>&pageSize=<VALUE>&pageNo=<VALUE>
+1. If pagesize <= 0 -> throw an error
+2. If pagesize > 0 -> return the results
+3. If pagesize > number of entries in the table -> return all matching entries
+4. If pageno <=0 -> throw an error
+5. If pageno > 0 -> return the matching entries of the table
+6. If pageno > number of allowed pages -> return empty json
+
+Problem 2: URL : /sport/tour/match
+1. Return all the matches with sport, tour, match name, match id, start time and format
+
+Problem 3:
+1. New Endpoint for Creating News  : URL : /news/createNews?matchId=<VALUE>&newsDate=<VALUE>&details=<VALUE> 
+	1. If matchId is missing in URL-> throws error
+	2. If Details are missing -> throws error
+	3. If Time is missing -> pick the current time
+	4. TourId and SportId will be automatically populated using matchId
+	5. if no results are found return empty json
+
+2. Create an endpoint to fetch news by match id : URL : /news/getNewsByMatchId?matchId=<VALUE> 
+	1. if matchId is missing in URL -> throws error
+	2. else -> return the  result
+	3. if no results are found return empty json
+
+3. Create an endpoint to fetch news by tour id : URL : /news/getNewsByTourId?tourId=<VALUE>
+	1. if tourId is missing in URL -> throws error
+	2. else -> return the  result
+	3. if no results are found return empty json
+
+4. Create an endpoint to fetch news by sport id : URL : /news/getNewsByTourId?sportId=<VALUE>
+	1. if sportId is missing in URL -> throws error
+	2. else -> return the  result
+	3. if no results are found return empty json
+
+
+Note: For database I was using PORT: 8000 because 3306 was occupied. I kept PORT: 8000.

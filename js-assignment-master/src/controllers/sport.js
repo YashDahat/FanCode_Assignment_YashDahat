@@ -4,14 +4,17 @@ const getAllSportsToursAndMatches = async () => {
     const matches = await Sport.getAllSportsToursAndMatches();
     const res = {};
     matches.forEach(match => {
-        const { sportName, tourName, matchName } = match;
+        const { sportName, tourName, matchName, matchId, startTime, format} = match;
         if (!res[sportName]) {
             res[sportName] = {};
         }
         if (!res[sportName][tourName]) {
             res[sportName][tourName] = [];
         }
-        res[sportName][tourName].push(matchName);
+        //We will store match detials here.
+        const matchDetails = {};
+        matchDetails[matchName] = {matchId, startTime, format};
+        res[sportName][tourName].push(matchDetails);
     });
     return res;
 }

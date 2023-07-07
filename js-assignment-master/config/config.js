@@ -6,7 +6,7 @@ const config = {
     },
     database: {
       host: 'db',
-      port: 3306,
+      port: 8000,
       username: 'myuser',
       password: 'mypassword',
       database: 'mydb'
@@ -19,7 +19,7 @@ const config = {
     },
     database: {
       host: 'localhost',
-      port: 3306,
+      port: 8000,
       username: 'myuser',
       password: 'mypassword',
       database: 'mydb'
