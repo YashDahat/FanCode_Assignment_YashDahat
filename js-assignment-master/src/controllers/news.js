@@ -1,8 +1,8 @@
 const News = require('../models/news');
 
 const setNews = async params => {
-    const {matchId, tourId, sportId, newsDate, details} = params;
-    if(!matchId || matchId<=0 || !details){
+    const {matchId, newsDate, title, description} = params;
+    if(!matchId || matchId<=0 || !title || !description){
         throw new Error('Required parameters are missing or have invalid value');
     }
     return await News.setNews(params);

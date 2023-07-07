@@ -13,7 +13,7 @@ Problem 2: URL : /sport/tour/match
 Problem 3:
 1. New Endpoint for Creating News  : URL : /news/createNews?matchId=<VALUE>&newsDate=<VALUE>&details=<VALUE> 
 	1. If matchId is missing in URL-> throws error
-	2. If Details are missing -> throws error
+	2. If title or description is missing -> throws error
 	3. If Time is missing -> pick the current time
 	4. TourId and SportId will be automatically populated using matchId
 	5. if no results are found return empty json

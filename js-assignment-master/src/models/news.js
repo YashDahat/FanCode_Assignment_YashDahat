@@ -9,8 +9,8 @@ const setNews = async params => {
     if(!newsDate){
         newsDate = new Date();
     }
-    const statement = 'insert ignore into mydb.news (matchId, tourId, sportId, newsDate, details) values (?, ?, ?, ?, ?)';
-    const parameters = [params.matchId, result[0].tourId, result[0].sportId, newsDate, params.details];
+    const statement = 'insert ignore into mydb.news (matchId, tourId, sportId, newsDate, title, description) values (?, ?, ?, ?, ?, ?)';
+    const parameters = [params.matchId, result[0].tourId, result[0].sportId, newsDate, params.title, params.description];
     return await mysql.query(statement, parameters);
 }
 
