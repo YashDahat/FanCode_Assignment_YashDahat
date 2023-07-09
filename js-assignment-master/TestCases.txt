@@ -12,24 +12,24 @@ Problem 2: URL : /sport/tour/match
 1. Return all the matches with sport, tour, match name, match id, start time and format
 
 Problem 3:
-1. New Endpoint for Creating News  : URL : /news/createNews?matchId=<VALUE>&newsDate=<VALUE>&details=<VALUE> 
+1. New Endpoint for Creating News  : URL : /news/createNews?matchId=<VALUE>&newsDate=<VALUE>&title=<VALUE>&description=<VALUE> or /news/createNews?matchId=<VALUE>&title=<VALUE>&description=<VALUE> 
 	1. If matchId is missing in URL-> throws error
 	2. If title or description is missing -> throws error
 	3. If Time is missing -> pick the current time
 	4. TourId and SportId will be automatically populated using matchId
 	5. if no results are found return empty json
 
-2. Create an endpoint to fetch news by match id : URL : /news/getNewsByMatchId?matchId=<VALUE> 
+2. Create an endpoint to fetch news by match id : URL : /news/match?matchId=<VALUE> 
 	1. if matchId is missing in URL -> throws error
 	2. else -> return the  result
 	3. if no results are found return empty json
 
-3. Create an endpoint to fetch news by tour id : URL : /news/getNewsByTourId?tourId=<VALUE>
+3. Create an endpoint to fetch news by tour id : URL : /news/tour?tourId=<VALUE>
 	1. if tourId is missing in URL -> throws error
 	2. else -> return the  result
 	3. if no results are found return empty json
 
-4. Create an endpoint to fetch news by sport id : URL : /news/getNewsByTourId?sportId=<VALUE>
+4. Create an endpoint to fetch news by sport id : URL : /news/sport?sportId=<VALUE>
 	1. if sportId is missing in URL -> throws error
 	2. else -> return the  result
 	3. if no results are found return empty json
