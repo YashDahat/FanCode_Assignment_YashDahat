@@ -11,17 +11,16 @@ module.exports = function(app) {
         }
     });
     //fetch news by matchId
-    app.route('/news/getNewsByMatchId').get(async (req, res, next) => {
+    app.route('/news/match').get(async (req, res, next) => {
         try{
             let params = req.query;
-            console.log("matchId:"+params.matchId);
             return res.json(await news.getNewsByMatchId(params));
         }catch(e){
             return next(e);
         }
     });
     //fetch news by tourId
-    app.route('/news/getNewsByTourId').get(async (req, res, next) => {
+    app.route('/news/tour').get(async (req, res, next) => {
         try{
             let params = req.query;
             return res.json(await news.getNewsByTourId(params));
@@ -30,7 +29,7 @@ module.exports = function(app) {
         }
     });
     //fetch news by sportId
-    app.route('/news/getNewsBySportId').get(async (req, res, next) => {
+    app.route('/news/sport').get(async (req, res, next) => {
         try{
             let params = req.query;
             return res.json(await news.getNewBySportId(params));
